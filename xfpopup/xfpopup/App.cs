@@ -12,7 +12,11 @@ namespace xfpopup
     {
         Button btnTest;
         Button btnDrop;
+        Button btnFloat;
+
         IXFPopupCtrl popCtrl;
+        IXFPopupCtrl fltCtrl;
+
         IXFPopupSrvc svr = DependencyService.Get<IXFPopupSrvc>();
         Page page;
 
@@ -52,12 +56,16 @@ namespace xfpopup
                 BackgroundColor = Color.Aqua
             };
 
+            
 
             btnDrop.Clicked += (object sender, EventArgs e) =>
             {
 
                 if (popCtrl == null)
                 {
+                    
+
+                    
                     popCtrl = svr.CreateDropDown(
                         btnDrop,
                         new StackLayout
@@ -121,12 +129,39 @@ namespace xfpopup
 
             btnTest.Clicked += async (object sender, EventArgs e) =>
             {
-                svr.ShowTopNoti(page, new Label { Text = "This is a notification" });
+                //svr.ShowTopNoti(page, new Label { Text = "This is a notification" });
 
                 var loading = svr.CreateLoading("Processing, please wait...");
                 loading.Show();
                 await Task.Delay(1000);
                 loading.Hide();
+
+
+                var anotherDropButton = new Button
+                {
+                    Text = "Drop in dialog"
+                };
+
+                IXFPopupCtrl anotherDropCtrl = null;
+
+                anotherDropButton.Clicked += (b, c) =>
+                {
+                    if (anotherDropCtrl == null) {
+                        anotherDropCtrl = svr.CreateDropDown(
+                            anotherDropButton, 
+                            new StackLayout
+                            {
+                                Children = {
+                                    new Label {
+                                        Text = "There is a popup in xlab library which use a relative layout to mimic the popup effect, but it's seem too slow for us (about 150~200ms for complex view). Frankly, I think Xamarin should spend more time for the layout mechanism, because of too many heavy work must invoke when we add/remove a view to/from a layout."
+                                    }
+                                }
+                            }
+                        );
+                    }
+
+                    anotherDropCtrl.Show();
+                };
 
                 var dlg = new XFPopupDlg(
                     page,
@@ -135,7 +170,8 @@ namespace xfpopup
                         Children = {
                             new Label{
                                 Text = "POPOPOPOPO"
-                            }
+                            },
+                            anotherDropButton
                         }
                     },
                     true,
@@ -143,6 +179,7 @@ namespace xfpopup
                     true,
                     "OK",
                     "KO");
+
 
 
 
