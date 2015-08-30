@@ -1,0 +1,13 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/packages
+/xfpopup/xfpopup/bin/Debug
+/xfpopup/xfpopup/obj/Debug
+/xfpopup/xfpopup.Droid/bin/Debug
+/xfpopup/xfpopup.Droid/obj/Debug
+/xfpopup/xfpopup.iOS/obj/iPhone/Debug
+/xfpopup/xfpopup.iOS/bin/iPhone/Debug
+/xfpopup/xfpopup.WinPhone/Bin/Debug
+/xfpopup/xfpopup.WinPhone/obj/Debug
