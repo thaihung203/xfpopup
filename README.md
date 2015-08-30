@@ -37,11 +37,15 @@ a wip library to display any view as :
   + dropdown view (like android's spinner or combobox)
   + top-down notification (not yet complete)
   + a native loading view
-As this is part of my bigger project, so I'll try my best to up it date every time I get free time. I really hope that someone could help me to finish this
+
+As this is a part of my bigger project, I'll try my best to up it date when I got time. I really hope that someone could help me to finish this
+
+#How to use
+Please look in the code, use it for whats you want
 
 #Limitations
 A lot ;), some are follows : 
   + The dropdow view is not change the size when the anchor view size changing (eg : the screen rotate from portrait to landscape)
   + the design of dialog look very ugly
-  + the function to get screen size not test (you can using the xlab device for this)
-  + not test for memory leak
+  + the function to get screen size is not tested (you can using the xlab device for this)
+  + memory leak not tested
