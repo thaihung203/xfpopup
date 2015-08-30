@@ -22,7 +22,7 @@ So to convert a xf's view to native views, all we need to do is:
       if (render == null)
       {
           render = RendererFactory.GetRenderer(source);
-        source.SetValue(RendererProperty, render);
+          source.SetValue(RendererProperty, render);
           var p = PlatformProperty.GetValue(valid);
           PlatformProperty.SetValue(source, p);
           IsPlatformEnabledProperty.SetValue(source, true);
