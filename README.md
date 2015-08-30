@@ -1,4 +1,4 @@
-# A native perfomance popup library for xamarin.forms
+# A WIP native perfomance popup library for xamarin.forms
 A popup (floating over) display for xamarin.forms.view
 
 #Motivation
@@ -31,3 +31,17 @@ So to convert a xf's view to native views, all we need to do is:
       return render;
   }
   ```
+#What's in the lib
+a wip library to display any view as : 
+  + modal dialog
+  + dropdown view (like android's spinner or combobox)
+  + top-down notification (not yet complete)
+  + a native loading view
+As this is part of my bigger project, so I'll try my best to up it date every time I get free time. I really hope that someone could help me to finish this
+
+#Limitations
+A lot ;), some are follows : 
+  + The dropdow view is not change the size when the anchor view size changing (eg : the screen rotate from portrait to landscape)
+  + the design of dialog look very ugly
+  + the function to get screen size not test (you can using the xlab device for this)
+  + not test for memory leak
