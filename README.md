@@ -13,7 +13,7 @@ There is a popup in xlab library which use a relative layout to mimic the popup 
 
 There also another option https://github.com/EgorBo/Toasts.Forms.Plugin but it predefined the view's layout of toast. So every time we need a new complex view, we have to scuba dive deep to the native layer, it's blow out all the advantages the XF bring to us.
 
-The most hardest part we found in this project is converting any xamarin's view to a native view, then display this native view as a popup is just an easy cake. After search through the forum I extracted some hints from this thread : https://forums.xamarin.com/discussion/33092/rendererfactory-getrenderer-is-it-bug-child-content to get the renderer. But it's not enough. In this case, decompilation is our friend (I pray Xamarin will never obfuscate their dll cause they using lots of internal - undocumented function). What's I exploited is each complex XF's view need an IPlatform to do their own layout's job, that's why we only get the root layout painted correctly if we only set the renderer. 
+The most hardest part we found in this project is converting any xamarin's view to a native view, then display this native view as a popup is just an easy cake. After search through the forum I extracted some hints from this thread : https://forums.xamarin.com/discussion/33092/rendererfactory-getrenderer-is-it-bug-child-content to get the renderer. But it's not enough. In this case, decompilation is our friend (I pray Xamarin will never obfuscate their dll cause they using lots of internal - undocumented function). What's I exploited is each complex XF's view need an IPlatform to do their own layout's job, that's why we only get the root layout painted correctly if we just set the renderer. 
 
 So to convert a xf's view to native views, all we need to do is: 
   ```
@@ -44,7 +44,7 @@ As this is a part of my bigger project, I'll try my best to up it date when I go
 Please look in the code, use it for whats you want
 
 #Limitations
-A lot ;), some are follows : 
+A lot ;), some (but not all) are follows : 
   + The dropdow view is not change the size when the anchor view size changing (eg : the screen rotate from portrait to landscape)
   + the design of dialog look very ugly
   + the function to get screen size is not tested (you can using the xlab device for this)
