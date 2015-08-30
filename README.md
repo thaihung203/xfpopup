@@ -3,13 +3,13 @@ A popup (floating over) display for xamarin.forms.view
 
 #Motivation
 
-Just like some of you, I'm doing exprimentions to learn how far we can go with XF. Although the framework look very promissing, it's still lack some basic things for us to make a good app.  A good way to float views above is one of them. Our requirement is : 
+Just like some of you, I'm doing exprimentions to learn how far we can go with XF. Although the framework look very promissing, it's still lack some basic things for us to make a good app.  A way to float views above other is one of them. Our requirements are : 
   + This must have the native performance 
   + This must flexible enough to display any complex view.
 
 #Behind the scene
 
-There is a popup in xlab library which use a relative layout to mimic the popup effect, but it's seem too slow for us (about 150~200ms for complex view). Frankly, I think Xamarin should spend more time for the layout mechanism, because of too many heavy work must invoke when we add/remove a view to/from a layout. 
+There is a popup in xlab library which use a relative layout to mimic the popup effect, but it's seem too slow for us (about 150~200ms for complex view). Frankly, I think Xamarin should spend more time for the xf's layout mechanism, as too many heavy work be invoked when we add/remove a view to/from a layout. 
 
 There also another option https://github.com/EgorBo/Toasts.Forms.Plugin but it predefined the view's layout of toast. So every time we need a new complex view, we have to scuba dive deep to the native layer, it's blow out all the advantages the XF bring to us.
 
