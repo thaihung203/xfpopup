@@ -3,7 +3,7 @@ A popup (floating over) display for xamarin.forms.view
 
 #Motivation
 
-Just like you (or maybe not - who know ;) ), I'm doing some exprimentions to learn how far we can go with XF. Although the framework look very promissing, it's still lack some basic things for us to make a good app.  A way to float views above others view is one of them. Our requirements are : 
+Just like you (or maybe not - who knows ;) ), I'm doing some exprimentions to learn how far we can go with XF. Although the framework look very promissing, it's still lack some basic things for us to make a good app.  A way to float views above others view is one of them. Our requirements are : 
   + This must have the native performance 
   + This must flexible enough to display any complex view.
 
