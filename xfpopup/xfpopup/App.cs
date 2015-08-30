@@ -12,10 +12,8 @@ namespace xfpopup
     {
         Button btnTest;
         Button btnDrop;
-        Button btnFloat;
 
         IXFPopupCtrl popCtrl;
-        IXFPopupCtrl fltCtrl;
 
         IXFPopupSrvc svr = DependencyService.Get<IXFPopupSrvc>();
         Page page;
@@ -42,7 +40,7 @@ namespace xfpopup
 
         public App()
         {
-
+            XFPopupConst.CONTROL_HEIGHT = (float) Device.GetNamedSize(NamedSize.Large, typeof(Label));
             btnTest = new Button
             {
                 Text = "TEST",
